@@ -32,7 +32,7 @@ defmodule ConduitMQTTExampleTest do
     # topic pattern
     # TODO fix this so its not overwritten wrongly in conduit
     assert received_message.source == ["foo", "bar"]
-    assert get_header(received_message, "routing_key") == "foo/bar1"
+    assert get_header(received_message, "routing_key") == "foo/bar"
     assert received_message.body == "test"
   end
 end

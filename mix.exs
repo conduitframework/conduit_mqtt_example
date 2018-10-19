@@ -1,0 +1,29 @@
+defmodule ConduitMQTTExample.MixProject do
+  use Mix.Project
+
+  def project do
+    [
+      app: :conduit_mqtt_example,
+      version: "0.1.0",
+      elixir: "~> 1.7",
+      start_permanent: Mix.env() == :prod,
+      deps: deps()
+    ]
+  end
+
+  # Run "mix help compile.app" to learn about applications.
+  def application do
+    [
+      extra_applications: [:logger],
+      mod: {ConduitMQTTExample.Application, []}
+    ]
+  end
+
+  # Run "mix help deps" to learn about dependencies.
+  defp deps do
+    [
+      {:conduit, "~> 0.12.0"},
+      {:conduit_mqtt, git: "https://github.com/conduitframework/conduit_mqtt", ref: "master"}
+    ]
+  end
+end

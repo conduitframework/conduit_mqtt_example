@@ -1,11 +1,11 @@
 # ConduitMQTTExample
 
-Example App that uses [Conduit](https://github.com/conduitframework/conduit) and [ConduitAMQP](https://github.com/conduitframework/conduit_amqp).
+Example App that uses [Conduit](https://github.com/conduitframework/conduit) and [ConduitMQTT](https://github.com/conduitframework/conduit_mqtt).
 
 ## Running
 
-You'll need a RabbitMQ running locally. This project expects the default RabbitMQ user `guest` with password `guest` and
-the default port `5672`. An easy way to do that is using docker, like so:
+You'll need an MQTT broker running locally.
+The default port `1883`. An easy way to do that is using docker, like so:
 
 ``` bash
 docker run -p 1883:1883 -e "DOCKER_VERNEMQ_ALLOW_ANONYMOUS=on" -e "DOCKER_VERNEMQ_log.console.level=debug" -it erlio/docker-vernemq:1.5.0

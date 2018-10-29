@@ -41,7 +41,7 @@ defmodule ConduitMQTTExample.Broker do
 
   pipeline :deserialize do
     plug(Conduit.Plug.Parse, content_type: "application/json")
-    plug(ConduitMQTT.Plug.Unwrap)
+    plug(Conduit.Plug.Unwrap)
     plug(PassThroughLogger)
   end
 
@@ -58,7 +58,7 @@ defmodule ConduitMQTTExample.Broker do
   end
 
   pipeline :serialize do
-    plug(ConduitMQTT.Plug.Wrap)
+    plug(Conduit.Plug.Wrap)
     plug(Conduit.Plug.Format, content_type: "application/json")
     plug(PassThroughLogger)
   end

@@ -15,7 +15,7 @@ defmodule ConduitMQTTExampleTest do
   test "a sent message can be received" do
     import Conduit.Message
 
-    ConduitMQTT.Util.wait_until(fn ->
+    Conduit.Util.wait_until(fn ->
       ConduitMQTT.Meta.get_broker_status(ConduitMQTTExample.Broker) == :up
     end)
 

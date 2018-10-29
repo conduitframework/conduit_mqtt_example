@@ -23,7 +23,7 @@ defmodule ConduitMQTTExample.MixProject do
   defp deps do
     [
       {:conduit, "~> 0.12.0"},
-      {:conduit_mqtt, git: "https://github.com/conduitframework/conduit_mqtt", ref: "master"}
+      {:conduit_mqtt, "~> 0.1.0"}
     ]
   end
 end
